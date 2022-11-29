@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>jquery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha512-Dop/vW3iOtayerlYAqCgkVr2aTr2ErwwTYOvRFUpzl2VhCMJyjQF0Q9TjUXIo6JhuM/3i0vVEt2e/7QQmnHQqw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <script src="jquery.min.js"></script>
+    <style type="text/css">
+    
+         .square{
+            width:5rem;
+            height:5rem;
+            background-color:red;    
+            margin: 3rem;
+            display: inline-block;
+         }
+         .circle{
+            width: 20rem;
+            height:20rem;
+            background-color:green;
+            border-radius: 50%; 
+            display: inline-block;
+            margin: 3rem;
+            position: relative;
+            top: 3rem;
+         }
+         .box{
+            position: relative;
+            top: 45rem;
+            background-color: black;
+            width: 5rem;
+            height: 5rem;
+            left: 50%;
+         }
+         .btn{
+            position: relative;
+            top: 60rem;
+         }
+    </style>
+</head>
+<body>
+    <iframe src="https://www.bbc.com/" ></iframe>
+         <div class="square"></div>
+         <div class="square"></div>
+         <div class="circle"></div>
+         <h1 class="box" style="animation-delay: 2s;"></h1>
+         <button class="btn"></button>
+    <script type="text/javascript">
+       $(window).scroll( function () {
+        $(".circle").css("opacity",1 - $(window).scrollTop()/150)
+    });
+       $(".circle").click(function(){
+          $(".circle").animate({width: "30rem",
+        height: "30rem",
+        marginLeft : "10rem",
+         },2000, function () {
+            $(this).css("background-color", "red")
+         })
+        });
+    
+
+    
+
+    </script>
+</body>    
+</html> 
